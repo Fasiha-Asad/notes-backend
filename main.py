@@ -22,3 +22,10 @@ def update_note(id: int, note: str):
         "message": "Note update successfully",
         "note": notes[id]
     }
+@app.delete("/delete/{id}")
+def delete_note(id: int):
+    note = notes.pop(id)
+    return { 
+        "message": "Note deleted successfully",
+        "note": note
+    }
