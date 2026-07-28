@@ -15,3 +15,10 @@ def get_notes():
 @app.get("/get/{id}")
 def get_note(id: int):
     return notes[id]
+@app.put("/update/{id}")
+def update_note(id: int, note: str):
+    notes[id]=note
+    return {
+        "message": "Note update successfully",
+        "note": notes[id]
+    }
