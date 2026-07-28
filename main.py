@@ -12,3 +12,6 @@ def create_note(note: str):
 @app.get("/getnotes")
 def get_notes():
     return notes
+@app.get("/get/{id}")
+def get_note(id: int):
+    return notes[id]
