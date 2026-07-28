@@ -9,3 +9,6 @@ def create_note(note: str):
         "message":"Note created successfully",
         "note":note
     }
+@app.get("/getnotes")
+def get_notes():
+    return notes
