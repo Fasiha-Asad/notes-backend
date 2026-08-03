@@ -157,3 +157,8 @@ def del_note(id: int):
     return {
         "message": "Note deleted successfully"
     } 
+
+
+
+
+
